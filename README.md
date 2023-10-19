@@ -1,8 +1,10 @@
   
-# Used Car Listing Price Prediction
+# :sparkles: Used Car Listing Price Prediction :sparkles:
 ---
-![Project Profile Banner](https://raw.githubusercontent.com/anthonynamnam/brainstation_capstone/main/src/asset/image/profile_banner.webp)
+<img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/meme-1.png" alt="Project Banner" width="200"/>
+<img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/meme-2.webp" alt="Project Banner" width="200"/>
 ---
+
 ## Project Overview
 ### Problem
 

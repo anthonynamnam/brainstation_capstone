@@ -108,7 +108,7 @@ Assume being part of the data team in an online car listing platform, the price 
 |`vehicle_type`|`str`|Vehicle type of the vehicle.||
 |`drivetrain`|`str`|Drivetrain type of the vehicle.||
 |`transmission`|`str`|Transmission type of the vehicle.||
-|`fuel_type`|`str`|Supported fuel type of the vehicle.|Multiple fuel type in one cell|
+|`fuel_type`|`str`|Supported fuel type of the vehicle.|Multiple fuel types in one cell|
 |`engine_size`|`float`|Size of the vehicle engine||
 |`engine_block`|`str`|Type of the vehicle engine||
 |`seller_name`|`str`|Name of the Dealer||

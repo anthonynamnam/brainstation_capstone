@@ -2,7 +2,7 @@
 # :sparkles: Used Car Listing Price Range Prediction :sparkles:
 ---
 
-<img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/car-banner.png" alt="memes" width="600"/>
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/car-banner.png" alt="memes" width="600" /></center>
 
 ---
 
@@ -31,6 +31,7 @@
 - [Insights & Findings](#insights)
 
 ---
+
 ## :eyes: Project Overview :eyes: <a class="anchor" id="overview"></a>
 
 ### Introduction :clipboard: <a class="anchor" id="intro"></a>
@@ -38,11 +39,10 @@ The North American used car market is a boundless and dynamic landscape, charact
 
 Buyers and sellers often grapple with the challenge of accurately determining the fair market value of a used car, leading to potential disparities in pricing, suboptimal transactions, and general market inefficiencies. The dilemma of accurately pricing a used vehicles remains a persistent enigma for years. According to [canadadrives](https://www.canadadrives.ca/blog/car-guide/selling-a-used-car-privately), it takes up to 4 weeks to sell a used car. For both sellers and buyers, this dilemma often transforms into uncertainty, frustration, and even missed opportunities. 
 
-### Personal Story Behind :notebook_with_decorative_cover: <a class="anchor" id="story"></a>
-My friend, Jason, who lived in Vancouver for 2 years, wanted to get a car recently. He did not have enough budget to get a new car. Therefore he decided to buy a second-hand vehicle. He went to several dealers for inquiry. However, all dealer agents tried to persuade him to pay at a higher price to get a better car.  
-At last, he got his car from craigslist directly from the previous owner.
+### Story Behind :notebook_with_decorative_cover: <a class="anchor" id="story"></a>
+My friend, Jason, who lived in Vancouver for 2 years, wanted to get a car recently. He did not have enough budget to get a new car. Therefore, he decided to buy a second-hand vehicle. He went to several dealers for inquiries. However, all dealer agents tried to persuade him to pay at a higher price to get a better car. At last, he got his car from craigslist directly from the previous owner within his budget and his requirement.
 
-<img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/meme-1.png" alt="memes" width="200"/>
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/meme-1.png" alt="memes" width="200"/></center>
 
 ### Problem Statement :weary: <a class="anchor" id="problem"></a>
 The problem we try to address in this project remains focus on **the need for accurate and transparent pricing** in the North American used car market. The wide variety of vehicles, including numerous makes, models, years, mileage, drivetrains, transmission and geographic locations, contributes to the complexity of this problem. 
@@ -51,7 +51,7 @@ The problem we try to address in this project remains focus on **the need for ac
 - **Sellers** may often struggle to set competitive (higher) and attractive (lower) listing prices, potentially resulting in unsuccessful sales or missed opportunity. 
 
 ### Our Solution :bulb: <a class="anchor" id="solution"></a>
-<img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/meme-2.webp" alt="Project Banner" width="220"/>
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/meme-2.webp" alt="Project Banner" width="220"/></center>
 
 **To address these issues**, our purposed solution is to develop advanced machine learning and deep learning models that can accurately predict the price range of used cars in North America, considering multiple factors such as make, model, year, mileage, engine condition, location, and other optional features.
 
@@ -69,12 +69,9 @@ Sellers can benefit by setting **competitive and fair** prices, which can lead t
 The project includes the development of a simple and interactive user interface, making it accessible to a wide range of users. This interface allows sellers and buyers to input their vehicle details easily and obtain price range predictions quickly and conveniently.
 
 ### Potential Impact :boom: <a class="anchor" id="impact"></a>
-TODO  
-According to the research by [Straits Research](https://www.globenewswire.com/en/news-release/2023/03/14/2626611/0/en/Online-Car-Buying-Market-Size-is-projected-to-reach-USD-722-billion-by-2030-growing-at-a-CAGR-of-12-21-Straits-Research.html), **"Online Car Buying Market Size is projected to reach USD 722 billion by 2030, growing at a CAGR of 12.21%"**, online used car listing platform empowered by AI would facilitate the makret efficiency. The time cost and manpower saved for negoiation between parties would save up to 10% of the operation cost.
+According to the research by [Straits Research](https://www.globenewswire.com/en/news-release/2023/03/14/2626611/0/en/Online-Car-Buying-Market-Size-is-projected-to-reach-USD-722-billion-by-2030-growing-at-a-CAGR-of-12-21-Straits-Research.html), ***"Online Car Buying Market Size is projected to reach USD 722 billion by 2030, growing at a CAGR of 12.21%"***. Online used car listing platform empowered by AI would facilitate the makret efficiency, which generate more profit and reduce costs. The time cost and manpower saved for negoiation between parties would save up to 10% of the operation cost.
 
 Assume being part of the data team in an online car listing platform, the price range prediction service could be a premium feature that requires extra transaction percentage or, along with some free services, which is known as **Freemium Model**. The estimated growth of gross profit would be 5%.
-
-
 
 ---
 ## :capital_abcd: Dataset :1234: <a class="anchor" id="dataset"></a>
@@ -112,7 +109,7 @@ Assume being part of the data team in an online car listing platform, the price 
 |`vehicle_type`|`str`|Vehicle type of the vehicle.||
 |`drivetrain`|`str`|Drivetrain type of the vehicle.||
 |`transmission`|`str`|Transmission type of the vehicle.||
-|`fuel_type`|`str`|Supported fuel type of the vehicle.||
+|`fuel_type`|`str`|Supported fuel type of the vehicle.|Multiple fuel type in one cell|
 |`engine_size`|`float`|Size of the vehicle engine||
 |`engine_block`|`str`|Type of the vehicle engine||
 |`seller_name`|`str`|Name of the Dealer||
@@ -131,7 +128,6 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
     
 - Geospatial Coverage :airplane:
     - North America (Canada and United States)
-
 
 ---
 

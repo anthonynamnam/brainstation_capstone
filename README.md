@@ -20,7 +20,6 @@
     - [Data Source](#data-source)
     - [Data Coverage](#data-coverage)
 - [Project Roadmap](#roadmap)
-    - [Data Collection](#collection)
     - [Data Cleaning](#cleaning)
     - [Exploratory Data Analysis](#eda)
     - [Feature Engineering](#engine)

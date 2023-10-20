@@ -131,13 +131,16 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 
 ---
 
-## :runner: Project Roadmap :runner: <a class="anchor" id="roadmap"></a>
-### :white_check_mark: Data Collection :inbox_tray: <a class="anchor" id="collection"></a>
-TODO: Add content
-### :white_check_mark: Data Cleaning :bathtub: <a class="anchor" id="cleaning"></a>
-TODO: Add content
+## :runner: Project Roadmap / Framework :runner: <a class="anchor" id="roadmap"></a>
+### :white_check_mark: Data Cleaning :bathtub: <a class="anchor" id="cleaning"></a>  
+- Remove records without target variable data
+- Target variable labelling
+- Handling Missing Value
+- Column List Flattening
+
 ### :white_check_mark: Exploratory Data Analysis :mag: <a class="anchor" id="eda"></a>
-TODO: Add content
+- Univariate Analysis
+- Bivariate Analysis
 
 ### :white_square_button: Feature Engineering <a class="anchor" id="engine"></a>
 ### :white_square_button: Feature Selection <a class="anchor" id="select"></a>
@@ -151,4 +154,4 @@ TODO: Add content
 ### :white_square_button: User Interface Development <a class="anchor" id="ui"></a>
 
 ## :bulb: Insights & Findings :bulb: <a class="anchor" id="insights"></a>
-TODO: Add insight
+To be concluded.

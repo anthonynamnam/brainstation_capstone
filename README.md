@@ -80,14 +80,14 @@ Assume being part of the data team in an online car listing platform, the price 
 - We will concatenate both datasets together and generate a column `country` during feature engineering stage.
 - Both datasets have the same set of columns.
 - Dimension of the Datasets:
-    |Filename|Country|#. of Rows|#. of Columns|
-    |---|---|---|---|
-    |`data/ca-dealers-used.csv`|`CA`|393,603|21|
-    |`data/us-dealers-used.csv`|`US`|7,104,304|21|
+    |Filename|Country|#. of Rows|#. of Columns|Size|
+    |---|:---:|:---:|:---:|:---:|
+    |`data/ca-dealers-used.csv`|`CA`|393,603|21|69.60 MB|
+    |`data/us-dealers-used.csv`|`US`|7,104,304|21|1.28 GB|
     ||**TOTAL**|7,497,907|21|
 - Unique Vehicle Count:
-    |Filename|Country|#. of Unique Vehicle|
-    |---|---|---|
+    |Filename|Country|#. of Unique Car|
+    |---|:---:|:---:|
     |`data/ca-dealers-used.csv`|`CA`|226,691|
     |`data/us-dealers-used.csv`|`US`|2,387,394|
     ||**TOTAL**|2,614,085|

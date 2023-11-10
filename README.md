@@ -149,6 +149,9 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
     - Categorical Encoding
 - Multiple Listing Reduction
     - Exact same vehicle with multiple listing ranges in different dealers
+- Class Imbalance
+    - Over-Sampling
+    - Hybrid-Sampling (To be tested)
 
 ### :white_check_mark: Model Development <a class="anchor" id="develop"></a>
 - Model Tested:
@@ -168,15 +171,19 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
     - Metric: `weighted_f1_score`
 
 #### TODO: Fill Score
-|`model`|`weighted_f1_score`|
-|:---|:---:|
-|Logistic Regression||
-|Decision Tree||
-|Support Vector Classifier
-||
+|`model`|`train_score`|`test_score`|
+|:---|:---:|:---:|
+|`Logistic Regression`|`__%`|`__%`|
+|`Decision Tree`|`__%`|`__%`|
+|`Support Vector Classifier`|`__%`|`__%`|
+|`AdaBoost`|`__%`|`__%`|
+|`Stochastic Gradient Boosting`|`__%`|`__%`|
+|`XGBoost`|`__%`|`__%`|
 
-#### TODO: 
-### :white_square_button: Feature Selection <a class="anchor" id="select"></a>
+
+### :white_check_mark: Feature Selection <a class="anchor" id="select"></a>
+- Prinicipal Component Analysis
+    - Not useful to improve model performance in our dataset
 
 ### :white_square_button: Model Deployment <a class="anchor" id="deploy"></a>
 ### :white_square_button: User Interface Development <a class="anchor" id="ui"></a>

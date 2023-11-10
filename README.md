@@ -131,24 +131,53 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 ---
 
 ## :runner: Project Roadmap / Framework :runner: <a class="anchor" id="roadmap"></a>
-### :white_check_mark: Data Cleaning :bathtub: <a class="anchor" id="cleaning"></a>  
+### :white_check_mark: Data Cleaning / Preprocessing :bathtub: <a class="anchor" id="cleaning"></a>  
 - Remove records without target variable data
 - Target variable labelling
 - Handling Missing Value
-- Column List Flattening
+- Features Flattening
 
 ### :white_check_mark: Exploratory Data Analysis :mag: <a class="anchor" id="eda"></a>
 - Univariate Analysis
 - Bivariate Analysis
+- Statistical Analysis
+- Correlation Analysis
 
-### :white_square_button: Feature Engineering <a class="anchor" id="engine"></a>
+### :white_check_mark: Feature Engineering <a class="anchor" id="engine"></a>
+- Feature Transformation 
+    - Log Transformation
+    - Categorical Encoding
+- Multiple Listing Reduction
+    - Exact same vehicle with multiple listing ranges in different dealers
+
+### :white_check_mark: Model Development <a class="anchor" id="develop"></a>
+- Model Tested:
+    - :white_check_mark: Logistic Regression **(Baseline Model)**
+    - :white_check_mark: Decision Tree
+    - :white_check_mark: Stochastic Gradient Boosting
+    - :white_check_mark: Adative Boosting
+    - :white_check_mark: XGBoost
+- Model To Be Tested:
+    - :white_square_button: Random Forest
+    - :white_square_button: CatBoost
+    - :white_square_button: Naive Bayes
+    - :white_square_button: K-Nearest Neightbor
+    - :white_square_button: Neural Networks
+
+- Model Evaluation
+    - Metric: `weighted_f1_score`
+
+#### TODO: Fill Score
+|`model`|`weighted_f1_score`|
+|:---|:---:|
+|Logistic Regression||
+|Decision Tree||
+|Support Vector Classifier
+||
+
+#### TODO: 
 ### :white_square_button: Feature Selection <a class="anchor" id="select"></a>
-### :white_square_button: Model Development <a class="anchor" id="develop"></a>
-- Baseline Model
-- Model Training
-- Model Testing
-- Model Validation
-- Performance Evaluation
+
 ### :white_square_button: Model Deployment <a class="anchor" id="deploy"></a>
 ### :white_square_button: User Interface Development <a class="anchor" id="ui"></a>
 

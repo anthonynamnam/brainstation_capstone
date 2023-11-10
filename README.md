@@ -170,15 +170,13 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 - Model Evaluation
     - Metric: `weighted_f1_score`
 
-#### TODO: Fill Score
 |`model`|`train_score`|`test_score`|
 |:---|:---:|:---:|
-|`Logistic Regression`|`__%`|`__%`|
-|`Decision Tree`|`__%`|`__%`|
-|`Support Vector Classifier`|`__%`|`__%`|
-|`AdaBoost`|`__%`|`__%`|
-|`Stochastic Gradient Boosting`|`__%`|`__%`|
-|`XGBoost`|`__%`|`__%`|
+|`Logistic Regression`|`71.77%`|`71.70%`|
+|`Decision Tree`|`82.15%`|`82.80%`|
+|`AdaBoost`|`89.91%`|`85.36%`|
+|`Stochastic Gradient Boosting`|`90.98%`|`85.72%`|
+|`XGBoost`|`95.85%`|`85.29%`|
 
 
 ### :white_check_mark: Feature Selection <a class="anchor" id="select"></a>

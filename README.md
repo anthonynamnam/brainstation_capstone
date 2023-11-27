@@ -26,7 +26,6 @@
     - [Feature Selection](#select)
     - [Model Development](#develop)
     - [Model Deployment](#deploy)
-    - [Simple User Interface](#ui)
 - [Insights & Findings](#insights)
 
 ---
@@ -168,14 +167,26 @@ TODO: Add more
 - Model Evaluation
     - Metric: `weighted_f1_score`
 
-|`model`|`train_score`|`test_score`|
-|:---|:---:|:---:|
-|`Logistic Regression`|`71.77%`|`71.70%`|
-|`Decision Tree`|`82.15%`|`82.80%`|
-|`AdaBoost`|`89.91%`|`85.36%`|
-|`Stochastic Gradient Boosting`|`90.98%`|`85.72%`|
-|`XGBoost`|`95.85%`|`85.29%`|
+- Model Performance trained with 10% of data
 
+|`model`|`training F1`|`testing F1`|
+|:---|:---:|:---:|
+|`Logistic Regression (Baseline)`|`69.74%`|`69.82%`|
+|`Logistic Regression`|`71.77%`|`71.81%`|
+|`Decision Tree`|`82.15%`|`82.94%`|
+|`AdaBoost`|`85.34%`|`85.89%`|
+|`XGBoost`|`85.42%`|`85.85%`|
+|`Random Forest`|`85.39%`|`85.82%`|
+|`Gaussian Naive Bayes`|`45.75%`|`43.18%`|
+|`Neural Network`|`32.06%`|`32.38%`|
+
+- Model Performance trained with full set of data
+
+|`Model`|`Training Time`|`training F1`|`testing F1`|
+|---|:---:|:---:|:---:|
+|`AdaBoost`|3h 14m 20s|`86.95%`|`87.06%`|
+|`XGBoosting`|34m 43s|`87.32%`|`87.46%`|
+|`Random Forest`|20m 47s|`87.30%`|`87.47%`|
 
 ### :white_check_mark: Feature Selection <a class="anchor" id="select"></a>
 - Prinicipal Component Analysis

@@ -151,8 +151,8 @@ TODO: Add more
 - Multiple Listing Reduction
     - Exact same vehicle with multiple listing ranges in different dealers
 - Class Imbalance
-    - Over-Sampling
-    - Hybrid-Sampling (To be tested)
+    - Over-Sampling ([Random Oversampling](#https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.RandomOverSampler.html#imblearn.over_sampling.RandomOverSampler) & [SMOTENC](#https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTENC.html))
+    - Hybrid-Sampling
 
 ### :white_check_mark: Model Development <a class="anchor" id="develop"></a>
 - Model Tested:
@@ -165,7 +165,7 @@ TODO: Add more
     - :white_check_mark: Neural Networks
 
 - Model Evaluation
-    - Metric: `weighted_f1_score`
+    - Metric: [`weighted_f1_score`](#https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
 
 - Model Performance trained with 10% of data
 
@@ -177,7 +177,7 @@ TODO: Add more
 |`AdaBoost`|`85.34%`|`85.89%`|
 |`XGBoost`|`85.42%`|`85.85%`|
 |`Random Forest`|`85.39%`|`85.82%`|
-|`Gaussian Naive Bayes`|`45.75%`|`43.18%`|
+|`Gaussian Naïve Bayes`|`45.75%`|`43.18%`|
 |`Neural Network`|`32.06%`|`32.38%`|
 
 - Model Performance trained with full set of data
@@ -190,7 +190,7 @@ TODO: Add more
 
 ### :white_check_mark: Feature Selection <a class="anchor" id="select"></a>
 - Prinicipal Component Analysis
-    - Not useful to improve model performance in our dataset
+    - We have tested PCA with 90% and 95% variance explained. But PCA is not useful to improve model performance in our dataset.
 
 ### :white_check_mark: Model Deployment & User Interface Development<a class="anchor" id="deploy"></a>
 

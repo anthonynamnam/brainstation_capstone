@@ -6,7 +6,7 @@
 
 ---
 
-## :memo: Table of Contents :memo:
+## :memo: Table of Contents :memo: <a class="anchor" id="toc"></a>
 - [Project Overview](#overview)
     - [Introduction](#intro)
     - [Story Behind](#story)
@@ -25,8 +25,14 @@
     - [Feature Engineering](#engine)
     - [Feature Selection](#select)
     - [Model Development](#develop)
+    - [Model Interpretation](#interpret)
     - [Model Deployment](#deploy)
-- [Insights & Findings](#insights)
+    - [User Interfave Development](#ui)
+- [Conclusion](#conclusion)
+    - [Insights & Findings](#insights)
+    - [Key Takeaways](#takeaways)
+    - [Future Directions](#nextsteps)
+    - [Final Thoughts](#thoughts)
 
 ---
 
@@ -70,6 +76,8 @@ The project includes the development of a simple and interactive user interface,
 According to the research by [Straits Research](https://www.globenewswire.com/en/news-release/2023/03/14/2626611/0/en/Online-Car-Buying-Market-Size-is-projected-to-reach-USD-722-billion-by-2030-growing-at-a-CAGR-of-12-21-Straits-Research.html), ***"Online Car Buying Market Size is projected to reach USD 722 billion by 2030, growing at a CAGR of 12.21%"***. Online used car listing platform empowered by AI would facilitate the makret efficiency, which generate more profit and reduce costs. The time cost and manpower saved for negoiation between parties would save up to 10% of the operation cost.
 
 Assume being part of the data team in an online car listing platform, the price range prediction service could be a premium feature that requires extra transaction percentage or, along with some free services, which is known as **Freemium Model**. The estimated growth of gross profit would be 20%.
+
+[Back to top](#toc)
 
 ---
 ## :capital_abcd: Dataset :1234: <a class="anchor" id="dataset"></a>
@@ -127,6 +135,8 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 - Geospatial Coverage :airplane:
     - North America (Canada and United States)
 
+[Back to top](#toc)
+
 ---
 
 ## :runner: Project Roadmap / Framework :runner: <a class="anchor" id="roadmap"></a>
@@ -142,9 +152,9 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 - Statistical Analysis
 - Correlation Analysis
 
-TODO: Add more
+For EDA Finding, please refer to [here](#insights).
 
-### :white_check_mark: Feature Engineering <a class="anchor" id="engine"></a>
+### :white_check_mark: Feature Engineering 🔧 <a class="anchor" id="engine"></a>
 - Feature Transformation 
     - Log Transformation
     - Categorical Encoding
@@ -154,7 +164,7 @@ TODO: Add more
     - Over-Sampling ([Random Oversampling](#https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.RandomOverSampler.html#imblearn.over_sampling.RandomOverSampler) & [SMOTENC](#https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTENC.html))
     - Hybrid-Sampling
 
-### :white_check_mark: Model Development <a class="anchor" id="develop"></a>
+### :white_check_mark: Model Development 🔩 <a class="anchor" id="develop"></a>
 - Model Tested:
     - :white_check_mark: Logistic Regression **(Baseline Model)**
     - :white_check_mark: Decision Tree
@@ -165,12 +175,12 @@ TODO: Add more
     - :white_check_mark: Neural Networks
 
 - Model Evaluation
-    - Metric: [`weighted_f1_score`](#https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
+    - Metric: [`Weighted F1 Score`](#https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
 
 - Model Performance trained with 10% of data
 
-|`model`|`training F1`|`testing F1`|
-|:---|:---:|:---:|
+|`Models`|`Training F1`|`Testing F1`|
+|---|:---:|:---:|
 |`Logistic Regression (Baseline)`|`69.74%`|`69.82%`|
 |`Logistic Regression`|`71.77%`|`71.81%`|
 |`Decision Tree`|`82.15%`|`82.94%`|
@@ -182,17 +192,33 @@ TODO: Add more
 
 - Model Performance trained with full set of data
 
-|`Model`|`Training Time`|`training F1`|`testing F1`|
+|`Models`|`Training Time`|`Training F1`|`Testing F1`|
 |---|:---:|:---:|:---:|
 |`AdaBoost`|3h 14m 20s|`86.95%`|`87.06%`|
 |`XGBoosting`|34m 43s|`87.32%`|`87.46%`|
 |`Random Forest`|20m 47s|`87.30%`|`87.47%`|
 
-### :white_check_mark: Feature Selection <a class="anchor" id="select"></a>
-- Prinicipal Component Analysis
-    - We have tested PCA with 90% and 95% variance explained. But PCA is not useful to improve model performance in our dataset.
+🏆 Best Model: `Random Forest`
 
-### :white_check_mark: Model Deployment & User Interface Development<a class="anchor" id="deploy"></a>
+### :white_check_mark: Model Interpretation (`Random Forest`) 🔢 <a class="anchor" id="interpret"></a>
+
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/rf_interpret.png" alt="feature-importance" width="500" /></center>
+
+The **top 5 most important features** for used car price listing are:
+1. `model_year`: The launch year of the car model
+2. `log_miles`: The miles travelled by the car (Odometer value)
+3. `model`: The car model
+4. `trim`: The version of car model
+5. `engine_size` The size of the car engine
+
+### :white_check_mark: Feature Selection 📤 <a class="anchor" id="select"></a>
+- Prinicipal Component Analysis
+    - We tested PCA with 90% and 95% variance explained. But PCA is not useful to improve model performance in our dataset.
+    - The possible reasons are:
+        1. We removed features with less predictive power during feature engineering phase. 
+        2. We have only around 20 columns, which may not require any dimension reduction.
+
+### :white_check_mark: Model Deployment 🚛 <a class="anchor" id="deploy"></a>
 
 #### Instruction to run the Web Interface locally
 1. Clone this project
@@ -227,9 +253,74 @@ streamlit run 👀_Project_Overview.py
 
 7. Make prediction in the `🎲 Make Prediction` tab
 
-## :bulb: Insights & Findings :bulb: <a class="anchor" id="insights"></a>
-TODO: To be concluded. 
+### :white_check_mark: User Interface Development 🖥️<a class="anchor" id="ui"></a>
+- We developed our simple web UI with streamlit Python API.
+- You may input the data and make prediction with our best model.
 
-## :bulb: Conclusion :bulb: <a class="anchor" id="insights"></a>
-TODO: To be concluded.
+[Back to top](#toc)
 
+---
+
+## :bulb: Conclusion :bulb: <a class="anchor" id="conclusion"></a>
+### :bulb: Insights & Findings 🧠<a class="anchor" id="insights"></a>
+
+
+- Throughout this project, our exploration and analysis have yielded invaluable insights and notable achievements. 
+- We've unearthed nuanced patterns, revealing hidden correlations and trends within the used car data. These discoveries not only enhance our understanding of the problem domain but also pave the way for informed decision-making. Here are some examples:
+
+    - Finding - 1
+        - `miles` follow log-normal distribution.
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/log_miles.png" alt="log-miles" width="500" /></left>
+    - Finding - 2
+        - Relationship between `log_miles` and `price range`.
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/miles_pr.png" alt="log-miles-vs-price-range" width="500" /></left>
+    - Finding - 3
+        - Relationship between `engine_size` and `price range`.
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/engine_pr.png" alt="engine-size-vs-price-range" width="500" /></left>
+
+
+### :bulb: Key Takeaways 🎁 <a class="anchor" id="takeaways"></a>
+
+- `Data Imputation:`
+    - Different types of imputation methods (e.g. `Forward/Baclward Fill` & `Regression Imputation`).
+    - Their characteristics, advantages and disadvantages.
+    - Their possible use cases.
+- `Feature Encodings:`
+    - Different types of encoding methods (e.g. `Count Encoding` & `Target Encoding`).
+    - Their characteristics, advantages and disadvantages.
+    - Their possible use cases.
+- `Log-Normal Distribution:`
+    - Understand the possible reason why `log-normal distribution` appears in data related to multiplicative processes.
+    - How to and why it is better to handle `log-normal distribution`.
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/log_normal.png" alt="log-normal" width="500" /></center>
+- `Kruskal-Wallis Test:`
+    - Alternative statistical test for ANOVA.
+    - Applicable when equal variance assumption is violated in ANOVA.
+    - Null Hypothesis: Median of all groups are the same.
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/kruskal_wallis.png" alt="kruskal-wallis" width="500" /></center>
+- `Class Imbalance:`
+    - Understand the drawbacks of class imbalance.
+    - Techniques to handle class imbalance (e.g. `Oversampling` & `UnderSampling` & `HybridSampling`).
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/class_bal.png" alt="classs-imbalance" width="400" /></center>
+- `Model Development:`
+    - How to write re-usable code for different models.
+- `Prettify Jupyter Notebooks:`
+    - Apply `html` component to add style in `markdown`.
+- `Develop User Interface with Streamlit:`
+    - Using streamlit Python API to build a simple Web User Interface for making prediction.
+
+### :bulb: Future Directions 🧭 <a class="anchor" id="nextsteps"></a>
+Although this project is not a perfect solution, there are a large room for improvement. These are the possible next steps of this project:
+
+- Extend our models to regression task (i.e. `predicting exact listing price`)
+- Fine-tune (Re-train) our models with new data 
+- Incorporate with additional features
+- Design new model structure to beat our best model (`Random Forest`)
+- Further enhance our Web UI
+
+### :bulb: Final Thoughts 💬 <a class="anchor" id="thoughts"></a>
+Although this project is not a perfect solution, there are a large room for improvement. To conclude, this project has been showcasing the power of data-driven methodologies in solving real-life problems in used car market. Our journey of data exploration, feature engineering, and model development has brought us closer to addressing the challenge of **_Price Uncertainty in Used Car Market_**. As we step forward, we embrace the continual development of leveraging data to drive meaningful impacts and innovative solution.
+
+[Back to top](#toc)
+
+---

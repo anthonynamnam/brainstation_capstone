@@ -171,7 +171,7 @@ For EDA Finding, please refer to [here](#insights).
     - :white_check_mark: Adative Boosting
     - :white_check_mark: XGBoost
     - :white_check_mark: Random Forest
-    - :white_check_mark: Naive Bayes
+    - :white_check_mark: Naïve Bayes
     - :white_check_mark: Neural Networks
 
 - Model Evaluation
@@ -285,7 +285,7 @@ streamlit run 👀_Project_Overview.py
     - Different types of imputation methods (e.g. `Forward/Baclward Fill` & `Regression Imputation`).
     - Their characteristics, advantages and disadvantages.
     - Their possible use cases.
-- `Feature Encodings:`
+- `Feature Encoding:`
     - Different types of encoding methods (e.g. `Count Encoding` & `Target Encoding`).
     - Their characteristics, advantages and disadvantages.
     - Their possible use cases.

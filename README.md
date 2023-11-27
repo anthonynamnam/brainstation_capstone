@@ -143,6 +143,8 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 - Statistical Analysis
 - Correlation Analysis
 
+TODO: Add more
+
 ### :white_check_mark: Feature Engineering <a class="anchor" id="engine"></a>
 - Feature Transformation 
     - Log Transformation
@@ -157,15 +159,11 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 - Model Tested:
     - :white_check_mark: Logistic Regression **(Baseline Model)**
     - :white_check_mark: Decision Tree
-    - :white_check_mark: Stochastic Gradient Boosting
     - :white_check_mark: Adative Boosting
     - :white_check_mark: XGBoost
-- Model To Be Tested:
-    - :white_square_button: Random Forest
-    - :white_square_button: CatBoost
-    - :white_square_button: Naive Bayes
-    - :white_square_button: K-Nearest Neightbor
-    - :white_square_button: Neural Networks
+    - :white_check_mark: Random Forest
+    - :white_check_mark: Naive Bayes
+    - :white_check_mark: Neural Networks
 
 - Model Evaluation
     - Metric: `weighted_f1_score`
@@ -183,8 +181,44 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 - Prinicipal Component Analysis
     - Not useful to improve model performance in our dataset
 
-### :white_square_button: Model Deployment <a class="anchor" id="deploy"></a>
-### :white_square_button: User Interface Development <a class="anchor" id="ui"></a>
+### :white_check_mark: Model Deployment & User Interface Development<a class="anchor" id="deploy"></a>
+
+#### Instruction to run the Web Interface locally
+1. Clone this project
+```
+git clone https://github.com/anthonynamnam/brainstation_capstone.git
+```
+
+2. Go to `brainstation_capstotne/Streamlit` folder
+```
+cd brainstation_capstotne/Streamlit
+```
+
+3. Unzip the models (Please contact me for this file. Model files are not available online yet.)
+```
+unzip ../Models/models.zip -d ../Models
+```
+
+4. Creating a virtual env for dependencies
+```
+python3 -m venv .venv
+```
+
+5. Install dependency
+```
+pip install -r requirements.txt
+```
+
+6. Run it
+```
+streamlit run 👀_Project_Overview.py
+```
+
+7. Make prediction in the `🎲 Make Prediction` tab
 
 ## :bulb: Insights & Findings :bulb: <a class="anchor" id="insights"></a>
-To be concluded.
+TODO: To be concluded. 
+
+## :bulb: Conclusion :bulb: <a class="anchor" id="insights"></a>
+TODO: To be concluded.
+

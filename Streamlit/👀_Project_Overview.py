@@ -13,11 +13,8 @@ bg.mainpage_bg("https://res.cloudinary.com/dnzjbmzag/image/upload/v1692679078/Su
 # Title
 st.title('Used Car Price Range Prediction - Project Overview')
 
-# Content
-# TODO: Add brand oimage
-# c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14,c15 = st.columns(15)
-# c1.image(Image.open('images/ethereum-logo.png'))
-# c2.image(Image.open('images/bsc-logo.png'))
+layout.brand_logo_bar()
+layout.project_info_link()
 
 st.subheader('Introduction 📋')
 st.write(

@@ -185,9 +185,10 @@ st.set_page_config(page_title='Used Car Price Range Prediction', page_icon=':bar
 #         st.session_state.MODEL_PATH = os.path.join(st.session_state.CAPSTONE_PATH,"Models")
 with st.spinner('Loading Model...'):
     if 'CURRENT_MODEL' not in st.session_state:
-        st.session_state.model_option = {"Random Forest":"full_rf",
-                                         "Random Forest - with 10% of Data":"rf",
-                                         "AdaBoost":"full_abc"
+        # Available Model
+        st.session_state.model_option = {"Random Forest - Best Model":"full_rf",
+                                        #  "Random Forest - with 10% of Data":"rf",
+                                        #  "AdaBoost":"full_abc"
                                          }
         st.session_state.selected_model = list(st.session_state.model_option.keys())[0]
         
@@ -354,7 +355,9 @@ with c2:
     try:
         path = f"./images/{make.lower().replace(' ','_')}{f'_{model.lower()}' if model is not None else ''}.png"
         time.sleep(0.5)
-        st.image(Image.open(path),caption = f"Your {make}{f' - {model}' if model is not None else ''}")
+        st.image(Image.open(path),
+                 width = 400,
+                 caption = f"{make}{f' - {model}' if model is not None else ''}")
     except:
         # st.write("Image Not Available")
         pass

@@ -18,8 +18,7 @@ def footer():
         st.info("**[Medium](https://kwokanthony.medium.com/)**", icon="✍🏻")
         
 def project_info_link():
-    st.subheader("Links")
-    c1, c2,c3 = st.columns([0.2,0.2,0.6])
+    c1, c2, c3, c4 = st.columns([0.2,0.2,0.2,0.4])
     with c1:
         st.info("**[Project Repo](https://github.com/anthonynamnam/brainstation_capstone)**", icon="💡")
     with c2:

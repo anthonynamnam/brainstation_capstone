@@ -4,16 +4,22 @@ import streamlit as st
 import layout
 import bg
 
+if "PAGE_TITLE" not in st.session_state:
+    st.session_state["PAGE_TITLE"] = "SMARTLIST - Used Car Price Range Prediction"
+
 # Confit
-st.set_page_config(page_title='Used Car Price Range Prediction', page_icon=':bar_chart:', layout='wide')
+st.set_page_config(page_title=st.session_state["PAGE_TITLE"], page_icon=':bar_chart:', layout='wide')
 
 # Background
 bg.mainpage_bg("https://res.cloudinary.com/dnzjbmzag/image/upload/v1692679078/SubtlePastel1.jpg")
 
+# Vehicle Brand Logo
+layout.brand_logo_bar()
+
 # Title
 st.title('Used Car Price Range Prediction - Project Overview')
 
-layout.brand_logo_bar()
+# Links
 layout.project_info_link()
 
 st.subheader('Introduction 📋')

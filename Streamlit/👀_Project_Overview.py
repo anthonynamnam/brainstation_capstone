@@ -4,11 +4,11 @@ import streamlit as st
 import layout
 import bg
 
-if "PAGE_TITLE" not in st.session_state:
-    st.session_state["PAGE_TITLE"] = "SMARTLIST - Used Car Price Range Prediction"
 
-# Confit
+# Config
+layout.init_page_title()
 st.set_page_config(page_title=st.session_state["PAGE_TITLE"], page_icon=':bar_chart:', layout='wide')
+layout.sidebar()
 
 # Background
 bg.mainpage_bg("https://res.cloudinary.com/dnzjbmzag/image/upload/v1692679078/SubtlePastel1.jpg")
@@ -89,6 +89,3 @@ st.write(
     and obtain price range predictions quickly and conveniently.
     """
 )
-
-
-layout.footer()

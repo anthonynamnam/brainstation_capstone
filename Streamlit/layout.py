@@ -4,18 +4,21 @@ from PIL import Image
 
 def title():
     st.title("Used Car Price Range Prediction")
+    
+def init_page_title():
+    if "PAGE_TITLE" not in st.session_state:
+        st.session_state["PAGE_TITLE"] = "SMARTLIST - Used Car Price Range Prediction"
 
-def footer():
+def sidebar():
+    st.sidebar.subheader("Contact Me")
     
-    st.subheader("Contact Me")
+    # Contact
+    st.sidebar.info("**[My Github](https://github.com/anthonynamnam)**", icon="💻")
+    st.sidebar.info("**[LinkedIn](https://www.linkedin.com/in/anthony-kwok01)**", icon="🛜")
+    st.sidebar.info("**[Medium](https://kwokanthony.medium.com/)**", icon="✍🏻")
     
-    c1, c2, c3= st.columns(3)
-    with c1:
-        st.info("**[My Github](https://github.com/anthonynamnam)**", icon="💻")
-    with c2:
-        st.info("**[LinkedIn](https://www.linkedin.com/in/anthony-kwok01)**", icon="🛜")
-    with c3:
-        st.info("**[Medium](https://kwokanthony.medium.com/)**", icon="✍🏻")
+    # Scan Me QR Code
+    st.sidebar.image("./images/scanme.png")
         
 def project_info_link():
     c1, c2, c3, c4 = st.columns([0.2,0.2,0.2,0.4])

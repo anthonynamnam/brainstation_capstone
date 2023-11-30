@@ -161,8 +161,11 @@ def submit_form():
         time.sleep(1)
         
         # Show Prediction
-        pred = pd.DataFrame(convert_price_range(pred+1),columns=["Suggested Price Range"],index = ["Your Vehicle"])
-        st.write(pred)
+        # pred = pd.DataFrame(convert_price_range(pred+1),columns=["Suggested Price Range"],index = ["Your Vehicle"])
+        st.markdown(f"""
+                    <h3>Your Suggested Listing Price Range: {convert_price_range(pred+1)}</h3>
+                    """,
+                    unsafe_allow_html = True)
         status.update(label="Prediction Result", state="complete",expanded = True)
         if st.session_state.year is None or st.session_state.make is None or st.session_state.model is None or\
             st.session_state.trim is None or st.session_state.body_type is None or st.session_state.vehicle_type is None or \
@@ -172,10 +175,19 @@ def submit_form():
     
     st.toast('Your Prediction is done', icon='😍')
     
+def prefill():
+    st.session_state[f"last_make_ind"] = 1
+    st.session_state[f"last_model_ind"] = 4
+    st.session_state[f"last_trim_ind"] = 1
+    
+    
 ######################
 
+    
 # Config
-st.set_page_config(page_title='Used Car Price Range Prediction', page_icon=':bar_chart:', layout='wide')
+layout.init_page_title()
+st.set_page_config(page_title=st.session_state["PAGE_TITLE"], page_icon=':bar_chart:', layout='wide')
+layout.sidebar()
 
 # State Initialization
 # with st.spinner('Loading Page...'):
@@ -221,6 +233,9 @@ bg.mainpage_bg("https://res.cloudinary.com/dnzjbmzag/image/upload/v1692679078/Su
 
 st.warning("** This feature is just a prototype. Use wisely.")
 
+
+prefill()
+
 # Title and Model option
 c1, c2 = st.columns([0.7,0.3])
 with c1:
@@ -264,11 +279,11 @@ with c1:
         model = st.selectbox(
             display_name,
             st.session_state.DAFAULT_LIST + \
-                list(st.session_state.AVAILABLE_MAKE_MODEL_TRIM.loc[\
-                    (st.session_state.AVAILABLE_MAKE_MODEL_TRIM["make"] == st.session_state.make),state_name].unique()) \
+                sorted(list(st.session_state.AVAILABLE_MAKE_MODEL_TRIM.loc[\
+                    (st.session_state.AVAILABLE_MAKE_MODEL_TRIM["make"] == st.session_state.make),state_name].unique())) \
                         if st.session_state.make != st.session_state.DAFAULT_LIST[0] else \
-                            st.session_state[f"available_{state_name}"] ,
-            index=None,
+                            sorted(st.session_state[f"available_{state_name}"]) ,
+            index=None if f"last_{state_name}_ind" not in st.session_state else st.session_state[f"last_{state_name}_ind"],
             placeholder = make_placeholder(display_name),
             disabled= make is None,
             key=state_name
@@ -290,7 +305,7 @@ with c1:
                         (st.session_state.AVAILABLE_MAKE_MODEL_TRIM["model"] == st.session_state.model),state_name].unique()) \
                             if st.session_state.make != st.session_state.DAFAULT_LIST[0] else \
                                 st.session_state[f"available_{state_name}"] ,
-            index=None,
+            index=None if f"last_{state_name}_ind" not in st.session_state else st.session_state[f"last_{state_name}_ind"],
             placeholder = make_placeholder(display_name),
             disabled= make is None or model is None,
             key=state_name
@@ -308,7 +323,7 @@ with c1:
         st.selectbox(
             display_name,
             st.session_state[f"available_{state_name}"],
-            index=None,
+            index=3,#None,
             placeholder=make_placeholder(display_name),
             disabled= make is None,
             key=state_name
@@ -330,7 +345,7 @@ with c1:
                         (st.session_state.AVAILABLE_MAKE_MODEL_TRIM["model"] == st.session_state.model),state_name].unique()) \
                             if st.session_state.make != st.session_state.DAFAULT_LIST[0] else \
                                 st.session_state[f"available_{state_name}"] ,
-            index=None,
+            index=1,#None,
             placeholder = make_placeholder(display_name),
             key=state_name
         )
@@ -344,7 +359,7 @@ with c1:
         st.selectbox(
             display_name,
             st.session_state[f"available_{state_name}"],
-            index=None,
+            index=1,#None,
             placeholder = make_placeholder(display_name),
             key=state_name
         )   
@@ -374,7 +389,7 @@ with c1:
     st.selectbox(
         display_name,
         st.session_state[f"available_{state_name}"],
-        index=None,
+        index=1,#None,
         placeholder = make_placeholder(display_name),
         key=state_name
     )
@@ -387,7 +402,7 @@ with c2:
     st.selectbox(
         display_name,
         st.session_state[f"available_{state_name}"],
-        index=None,
+        index=1,#None,
         placeholder = make_placeholder(display_name),
         key=state_name
     )
@@ -398,7 +413,7 @@ with c3:
     st.multiselect(
         display_name,
         st.session_state.AVAILABLE_FUEL,
-        [],
+        ["Diesel","Unleaded"],
         placeholder=make_placeholder(display_name),
         key="fuels"
     )
@@ -414,7 +429,7 @@ with c1:
     st.selectbox(
         display_name,
         st.session_state[f"available_{state_name}"],
-        index=None,
+        index=1,#None,
         placeholder = make_placeholder(display_name),
         key=state_name
     )
@@ -425,7 +440,7 @@ with c2:
     st.number_input(
         display_name,
         placeholder=make_placeholder(display_name),
-        value = None,
+        value = 3.5,
         step = 0.1,
         key="engine_size"
     )
@@ -436,7 +451,7 @@ with c3:
     st.number_input(
         display_name,
         placeholder=make_placeholder(display_name),
-        value = None,
+        value = 5000,
         step = 1,
         key="miles"
     )
@@ -452,8 +467,5 @@ with c1:
     
 if submit:
     submit_form()
-# if reset:
-#     pass
-        
-# layout.footer()
+
     

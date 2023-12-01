@@ -2,7 +2,7 @@
 # :sparkles: Used Car Listing Price Range Prediction :sparkles:
 ---
 
-<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/car-banner.png" alt="memes" width="600" /></center>
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/car-banner.png" alt="memes" width="600" /></center>
 
 ---
 
@@ -46,7 +46,7 @@ Buyers and sellers often grapple with the challenge of accurately determining th
 ### Story Behind :notebook_with_decorative_cover: <a class="anchor" id="story"></a>
 My friend, Jason, who lived in Vancouver for 2 years, wanted to get a car recently. He did not have enough budget to get a new car. Therefore, he decided to buy a second-hand vehicle. He went to several dealers for inquiries. However, all dealer agents tried to persuade him to pay at a higher price to get a better car. At last, he got his car from craigslist directly from the previous owner within his budget and his requirement.
 
-<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/meme-1.png" alt="memes" width="200"/></center>
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/meme-1.png" alt="memes" width="200"/></center>
 
 ### Problem Statement :weary: <a class="anchor" id="problem"></a>
 The problem we try to address in this project remains focus on **the need for accurate and transparent pricing** in the North American used car market. The wide variety of vehicles, including numerous makes, models, years, mileage, drivetrains, transmission and geographic locations, contributes to the complexity of this problem. 
@@ -55,7 +55,7 @@ The problem we try to address in this project remains focus on **the need for ac
 - **Sellers** may often struggle to set competitive (higher) and attractive (lower) listing prices, potentially resulting in unsuccessful sales or missed opportunity. 
 
 ### Our Solution :bulb: <a class="anchor" id="solution"></a>
-<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/meme-2.webp" alt="Project Banner" width="220"/></center>
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/meme-2.webp" alt="Project Banner" width="220"/></center>
 
 **To address these issues**, our purposed solution is to develop advanced machine learning and deep learning models that can accurately predict the price range of used cars in North America, considering multiple factors such as make, model, year, mileage, engine condition, location, and other optional features.
 
@@ -202,7 +202,7 @@ For EDA Finding, please refer to [here](#insights).
 
 ### :white_check_mark: Model Interpretation (`Random Forest`) 🔢 <a class="anchor" id="interpret"></a>
 
-<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/rf_interpret.png" alt="feature-importance" width="500" /></center>
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/rf_interpret.png" alt="feature-importance" width="500" /></center>
 
 The **top 5 most important features** for used car price listing are:
 1. `model_year`: The launch year of the car model
@@ -256,6 +256,7 @@ streamlit run 👀_Project_Overview.py
 ### :white_check_mark: User Interface Development 🖥️<a class="anchor" id="ui"></a>
 - We developed our simple web UI with streamlit Python API.
 - You may input the data and make prediction with our best model.
+<left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/ui_demo.png" alt="Web UI Demo" width="500" /></left>
 
 [Back to top](#toc)
 
@@ -270,13 +271,13 @@ streamlit run 👀_Project_Overview.py
 
     - Finding - 1
         - `miles` follow log-normal distribution.
-        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/log_miles.png" alt="log-miles" width="500" /></left>
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log_miles.png" alt="log-miles" width="500" /></left>
     - Finding - 2
         - Relationship between `log_miles` and `price range`.
-        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/miles_pr.png" alt="log-miles-vs-price-range" width="500" /></left>
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/miles_pr.png" alt="log-miles-vs-price-range" width="500" /></left>
     - Finding - 3
         - Relationship between `engine_size` and `price range`.
-        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/engine_pr.png" alt="engine-size-vs-price-range" width="500" /></left>
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/engine_pr.png" alt="engine-size-vs-price-range" width="500" /></left>
 
 
 ### :bulb: Key Takeaways 🎁 <a class="anchor" id="takeaways"></a>
@@ -292,16 +293,16 @@ streamlit run 👀_Project_Overview.py
 - `Log-Normal Distribution:`
     - Understand the possible reason why `log-normal distribution` appears in data related to multiplicative processes.
     - How to and why it is better to handle `log-normal distribution`.
-    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/log_normal.png" alt="log-normal" width="500" /></center>
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log_normal.png" alt="log-normal" width="500" /></center>
 - `Kruskal-Wallis Test:`
     - Alternative statistical test for ANOVA.
     - Applicable when equal variance assumption is violated in ANOVA.
     - Null Hypothesis: Median of all groups are the same.
-    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/kruskal_wallis.png" alt="kruskal-wallis" width="500" /></center>
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/kruskal_wallis.png" alt="kruskal-wallis" width="500" /></center>
 - `Class Imbalance:`
     - Understand the drawbacks of class imbalance.
     - Techniques to handle class imbalance (e.g. `Oversampling` & `UnderSampling` & `HybridSampling`).
-    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/image/class_bal.png" alt="classs-imbalance" width="400" /></center>
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/class_bal.png" alt="classs-imbalance" width="400" /></center>
 - `Model Development:`
     - How to write re-usable code for different models.
 - `Prettify Jupyter Notebooks:`

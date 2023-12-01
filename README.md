@@ -221,7 +221,7 @@ The **top 5 most important features** for used car price listing are:
 ### :white_check_mark: Model Deployment 🚛 <a class="anchor" id="deploy"></a>
 
 #### Instruction to run the Web Interface locally
-1. Clone this project
+1. Open your terminal Clone this project
 ```
 git clone https://github.com/anthonynamnam/brainstation_capstone.git
 ```

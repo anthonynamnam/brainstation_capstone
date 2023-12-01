@@ -38,13 +38,13 @@ def load_available_option(feature):
     if name in st.session_state:
         return st.session_state[name]
     else:
-        with open("../Models/available_features.pkl", 'rb') as f:
+        with open("./models/available_features.pkl", 'rb') as f:
             df = pickle.load(f)
         st.session_state[name] = sorted(df[feature])
     
     
 def load_model(model_name):
-    return joblib.load(f"../Models/{model_name}_gs.pkl")
+    return joblib.load(f"./models/{model_name}_gs.pkl")
 
 def update_current_model(selected_model_name):
     if selected_model_name == "":
@@ -189,18 +189,13 @@ layout.init_page_title()
 st.set_page_config(page_title=st.session_state["PAGE_TITLE"], page_icon=':bar_chart:', layout='wide')
 layout.sidebar()
 
-# State Initialization
-# with st.spinner('Loading Page...'):
-#     if 'CAPSTONE_PATH' not in st.session_state:
-#         st.session_state.CAPSTONE_PATH = Path(os.getcwd())
-#     if 'MODEL_PATH' not in st.session_state:
-#         st.session_state.MODEL_PATH = os.path.join(st.session_state.CAPSTONE_PATH,"Models")
 with st.spinner('Loading Model...'):
     if 'CURRENT_MODEL' not in st.session_state:
         # Available Model
         st.session_state.model_option = {"Random Forest - Best Model":"full_rf",
-                                        #  "Random Forest - with 10% of Data":"rf",
-                                        #  "AdaBoost":"full_abc"
+                                         "Random Forest - with 10% of Data":"rf",
+                                         "AdaBoost":"full_abc",
+                                         "AdaBoost - with 10% of Data":"abc",
                                          }
         st.session_state.selected_model = list(st.session_state.model_option.keys())[0]
         
@@ -216,7 +211,7 @@ with st.spinner('Loading Variables...'):
                                         "E85","Electric","Compressed Natural Gas"])
 
     if "ALL_AVAILABLE_LIST" not in st.session_state:
-        with open("../Models/available_features.pkl", 'rb') as f:
+        with open("./models/available_features.pkl", 'rb') as f:
             df = pickle.load(f)
             st.session_state["ALL_AVAILABLE_LIST"] = df
             
@@ -225,7 +220,7 @@ with st.spinner('Loading Variables...'):
             st.session_state[f"available_{col}"] = sorted(st.session_state["ALL_AVAILABLE_LIST"][col])
             
     if "AVAILABLE_MAKE_MODEL_TRIM" not in st.session_state:
-        st.session_state.AVAILABLE_MAKE_MODEL_TRIM = pd.read_csv("../Models/make_model_trim_body.csv")
+        st.session_state.AVAILABLE_MAKE_MODEL_TRIM = pd.read_csv("./models/make_model_trim_body.csv")
 
 
 # Background

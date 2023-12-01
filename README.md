@@ -228,22 +228,22 @@ git clone https://github.com/anthonynamnam/brainstation_capstone.git
 
 2. Go to `brainstation_capstotne/Streamlit` folder
 ```
-cd brainstation_capstotne/Streamlit
+cd brainstation_capstone/Streamlit
 ```
 
-3. Unzip the models (Please contact me for this file. Model files are not available online yet.)
-```
-unzip ../Models/models.zip -d ../Models
-```
-
-4. Creating a virtual env for dependencies
+3. Creating a virtual env for dependencies
 ```
 python3 -m venv .venv
 ```
 
-5. Install dependency
+4. Install dependency
 ```
 pip install -r requirements.txt
+```
+
+5. Download the models from my Google drive
+```
+gdown --folder https://drive.google.com/drive/folders/1JMNtB5mY73ZW1feWbPqOMZcIRrWKlldA -O ./models  
 ```
 
 6. Run it

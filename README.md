@@ -125,7 +125,7 @@ Assume being part of the data team in an online car listing platform, the price 
 |`zip`|`str`|Dealer Location (Zip Code / Postal Code)|Different formats in US and CA|
 
 ### Data Source 💁 <a class="anchor" id="data-source"></a>
-Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.kaggle.com/datasets/3ea0a6a45dbd4713a8759988845f1a58038036d84515ded58f65a2ff2bd32e00/data)
+Dataset can be found on Kaggle ➡️ 🚪[Teleport](https://www.kaggle.com/datasets/3ea0a6a45dbd4713a8759988845f1a58038036d84515ded58f65a2ff2bd32e00/data)🚪
 
 ### Data Coverage 📆 <a class="anchor" id="data-coverage"></a>
 - Temporal Coverage 📅
@@ -317,32 +317,32 @@ streamlit run 👀_Project_Overview.py
 
 ### 🎁 Key Takeaways 🎁 <a class="anchor" id="takeaways"></a>
 
-- `Data Imputation:`
+- `Data Imputation`
     - Different types of imputation methods (e.g. `Forward/Baclward Fill` & `Regression Imputation`).
     - Their characteristics, advantages and disadvantages.
     - Their possible use cases.
-- `Feature Encoding:`
+- `Feature Encoding`
     - Different types of encoding methods (e.g. `Count Encoding` & `Target Encoding`).
     - Their characteristics, advantages and disadvantages.
     - Their possible use cases.
-- `Log-Normal Distribution:`
+- `Log-Normal Distribution`
     - Understand the possible reason why `log-normal distribution` appears in data related to multiplicative processes.
     - How to and why it is better to handle `log-normal distribution`.
     <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log-normal.png" alt="log-normal" width="500" /></center>
-- `Kruskal-Wallis Test:`
+- `Kruskal-Wallis Test`
     - Alternative statistical test for ANOVA.
     - Applicable when equal variance assumption is violated in ANOVA.
     - Null Hypothesis: Median of all groups are the same.
     <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/kruskal-wallis.png" alt="kruskal-wallis" width="500" /></center>
-- `Class Imbalance:`
+- `Class Imbalance`
     - Understand the drawbacks of class imbalance.
     - Techniques to handle class imbalance (e.g. `Oversampling` & `UnderSampling` & `HybridSampling`).
     <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/class-bal.png" alt="classs-imbalance" width="400" /></center>
-- `Model Development:`
+- `Model Development`
     - How to write re-usable code for different models.
-- `Prettify Jupyter Notebooks:`
+- `Prettify Jupyter Notebooks`
     - Apply `html` component to add style in `markdown`.
-- `Develop User Interface with Streamlit:`
+- `Develop User Interface with Streamlit`
     - Using streamlit Python API to build a simple Web User Interface for making prediction.
 
 ### 🧭 Future Directions 🧭 <a class="anchor" id="nextsteps"></a>

@@ -38,41 +38,41 @@
 
 ## 👀 Project Overview 👀 <a class="anchor" id="overview"></a>
 
-### Introduction :clipboard: <a class="anchor" id="intro"></a>
+### Introduction 📋 <a class="anchor" id="intro"></a>
 The North American used car market is a boundless and dynamic landscape, characterized by a huge industry of vehicle makes, models, and relentnessly evolving market dynamics. In 2022, the used car market recorded **38.6 millions** sales volume in United States [[Source: statista]](https://www.statista.com/statistics/183713/value-of-us-passenger-cas-sales-and-leases-since-1990/).  
 
 Buyers and sellers often grapple with the challenge of accurately determining the fair market value of a used car, leading to potential disparities in pricing, suboptimal transactions, and general market inefficiencies. The dilemma of accurately pricing a used vehicles remains a persistent enigma for years. According to [canadadrives](https://www.canadadrives.ca/blog/car-guide/selling-a-used-car-privately), it takes up to 4 weeks to sell a used car. For both sellers and buyers, this dilemma often transforms into uncertainty, frustration, and even missed opportunities. 
 
-### Story Behind :notebook_with_decorative_cover: <a class="anchor" id="story"></a>
+### Story Behind 📔 <a class="anchor" id="story"></a>
 My friend, Jason, who lived in Vancouver for 2 years, wanted to get a car recently. He did not have enough budget to get a new car. Therefore, he decided to buy a second-hand vehicle. He went to several dealers for inquiries. However, all dealer agents tried to persuade him to pay at a higher price to get a better car. At last, he got his car from craigslist directly from the previous owner within his budget and his requirement.
 
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/meme-1.png" alt="memes" width="200"/></center>
 
-### Problem Statement :weary: <a class="anchor" id="problem"></a>
+### Problem Statement 😩 <a class="anchor" id="problem"></a>
 The problem we try to address in this project remains focus on **the need for accurate and transparent pricing** in the North American used car market. The wide variety of vehicles, including numerous makes, models, years, mileage, drivetrains, transmission and geographic locations, contributes to the complexity of this problem. 
 
 - **Buyers** often find it difficult to assess whether a listed car's price is reasonable, leading to price uncertainty and the potential for overpayment.  
 - **Sellers** may often struggle to set competitive (higher) and attractive (lower) listing prices, potentially resulting in unsuccessful sales or missed opportunity. 
 
-### Our Solution :bulb: <a class="anchor" id="solution"></a>
+### Our Solution 💡 <a class="anchor" id="solution"></a>
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/meme-2.webp" alt="Project Banner" width="220"/></center>
 
 **To address these issues**, our purposed solution is to develop advanced machine learning and deep learning models that can accurately predict the price range of used cars in North America, considering multiple factors such as make, model, year, mileage, engine condition, location, and other optional features.
 
-### Objectives :dart: <a class="anchor" id="objective"></a>
-#### :one: Develop advanced predictive models that estimates the price range for used cars. 
+### Objectives 🎯 <a class="anchor" id="objective"></a>
+#### 1️⃣ Develop advanced predictive models that estimates the price range for used cars. 
 The primary objective is the development of machine learning / deep learning models capable of accurately predicting price ranges for a used car, which will assist both sellers and buyers make informed pricing decisions.
 
-#### :two: Improve market efficiency by enhancing the transparency and fairness in the used car market. 
-One of the objectives is to the improve the market efficiency. By providing AI price range predictions, it reduces **information asymmetry** between buyers and sellers ,which also helps users **understand the fair market value** of the used vehicle.
+#### 2️⃣ Improve market efficiency by enhancing the transparency and fairness in the used car market. 
+One of the objectives is to the improve the market efficiency. By providing AI price range predictions, it reduces **information asymmetry** between buyers and sellers, which also helps users **understand the fair market value** of the used vehicle.
 
-#### :three: Faciliate decision-making process for both sellers and buyers with informed pricing prediction. 
+#### 3️⃣ Faciliate decision-making process for both sellers and buyers with informed pricing prediction. 
 Sellers can benefit by setting **competitive and fair** prices, which can lead to **faster** sales. Buyers can make more informed and data-driven decisions to ensure they are **not overpaying** for a used vehicle.
 
-#### :four: Provide a user-friendly interface (simple website) for easy access to price range predictions.
+#### 4️⃣ Provide a user-friendly interface (simple website) for easy access to price range predictions.
 The project includes the development of a simple and interactive user interface, making it accessible to a wide range of users. This interface allows sellers and buyers to input their vehicle details easily and obtain price range predictions quickly and conveniently.
 
-### Potential Impact :boom: <a class="anchor" id="impact"></a>
+### Potential Impact 💥 <a class="anchor" id="impact"></a>
 According to the research by [Straits Research](https://www.globenewswire.com/en/news-release/2023/03/14/2626611/0/en/Online-Car-Buying-Market-Size-is-projected-to-reach-USD-722-billion-by-2030-growing-at-a-CAGR-of-12-21-Straits-Research.html), ***"Online Car Buying Market Size is projected to reach USD 722 billion by 2030, growing at a CAGR of 12.21%"***. Online used car listing platform empowered by AI would facilitate the makret efficiency, which generate more profit and reduce costs. The time cost and manpower saved for negoiation between parties would save up to 10% of the operation cost.
 
 Assume being part of the data team in an online car listing platform, the price range prediction service could be a premium feature that requires extra transaction percentage or, along with some free services, which is known as **Freemium Model**. The estimated growth of gross profit would be 20%.
@@ -82,7 +82,7 @@ Assume being part of the data team in an online car listing platform, the price 
 ---
 ## 🔠 Dataset 🔢 <a class="anchor" id="dataset"></a>
 
-### Dataset Description :abc: <a class="anchor" id="desc"></a>
+### Dataset Description 🔤 <a class="anchor" id="desc"></a>
 - There are two separate datasets for Canada data (CA) and United States data (US). However, some data are wrongly located. For example, there are records with `city` of `Burnaby` and `state` of `BC` in the US dataset.
 - We will concatenate both datasets together and generate a column `country` during feature engineering stage.
 - Both datasets have the same set of columns.
@@ -99,7 +99,7 @@ Assume being part of the data team in an online car listing platform, the price 
     |`data/us-dealers-used.csv`|`US`|2,387,394|
     ||**TOTAL**|2,614,085|
 
-### Data Dictionary :bookmark: <a class="anchor" id="data-dict"></a>
+### Data Dictionary 🔖 <a class="anchor" id="data-dict"></a>
 |Column|Data Type|Description|Remarks/Examples|
 |:---|:---:|:---|:---|
 |`id`|`str`|Unique ID for each listing on different platforms.||
@@ -124,15 +124,15 @@ Assume being part of the data team in an online car listing platform, the price 
 |`state`|`str`|Dealer Location (State)||
 |`zip`|`str`|Dealer Location (Zip Code / Postal Code)|Different formats in US and CA|
 
-### Data Source :information_desk_person: <a class="anchor" id="data-source"></a>
+### Data Source 💁 <a class="anchor" id="data-source"></a>
 Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.kaggle.com/datasets/3ea0a6a45dbd4713a8759988845f1a58038036d84515ded58f65a2ff2bd32e00/data)
 
-### Data Coverage :calendar: <a class="anchor" id="data-coverage"></a>
-- Temporal Coverage :date:
+### Data Coverage 📆 <a class="anchor" id="data-coverage"></a>
+- Temporal Coverage 📅
     - Starting Date: 01 April 2015
     - Ending Date: 05 Jun 2021
     
-- Geospatial Coverage :airplane:
+- Geospatial Coverage 🌎
     - North America (Canada and United States)
 
 [Back to top](#toc)
@@ -140,7 +140,8 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 ---
 
 ## 🏃 Project Roadmap / Framework 🏃 <a class="anchor" id="roadmap"></a>
-### :white_check_mark: Data Cleaning / Preprocessing :bathtub: <a class="anchor" id="cleaning"></a>  
+
+### ✅ Data Cleaning / Preprocessing 🛁 <a class="anchor" id="cleaning"></a>  
 - Remove records without target variable data
 - Target Variable Labelling (`Label Encoding`)
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/label-encoding.png" alt="Label-Encoding" width="500" /></center>
@@ -153,7 +154,7 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/data-flattening.png" alt="Data-Flattening" width="500" /></center>
 
 
-### :white_check_mark: Exploratory Data Analysis :mag: <a class="anchor" id="eda"></a>
+### ✅ Exploratory Data Analysis 🔍 <a class="anchor" id="eda"></a>
 - Univariate Analysis
 - Bivariate Analysis
 - Statistical Analysis
@@ -162,9 +163,9 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 Major Findings:
 - Model Make [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-vehicle-make/make?:language=en-GB&:display_count=n&:origin=viz_share_link)
     - Top 3 Brands: `Ford --> Chevrolet --> Toyota`
-<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/brand-count.png" alt="Model-Makee" width="400" /></center>
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/brand-count.png" alt="Model-Make" width="400" /></center>
 
-- Model Body Type [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-miles/body_type?:apiInternalVersion=1.105.0&:disableUrlActionsPopups=n&navSrc=Opt&:embed=y&navType=0&:suppressDefaultEditBehavior=n&mobile=n&:toolbar=n&:hideEditButton=n&:hideEditInDesktopButton=n&:jsdebug=n&:apiExternalVersion=3.2.0&:display_count=n&:origin=viz_share_link&:device=desktop)
+- Model Body Type [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-miles/body_type?:language=en-GB&:display_count=n&:origin=viz_share_link)
     - Top 3 Vehicle Body Type: `SUV --> Sedan --> Pickup`
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/body-type-count.png" alt="Body-Type" width="400" /></center>
     
@@ -173,7 +174,7 @@ Major Findings:
 
 For more EDA Finding, please refer to [here](#insights).
 
-### :white_check_mark: Feature Engineering 🔧 <a class="anchor" id="engine"></a>
+### ✅ Feature Engineering 🔧 <a class="anchor" id="engine"></a>
 - Feature Transformation 
     - Log Transformation
     - Target Encoding
@@ -184,15 +185,15 @@ For more EDA Finding, please refer to [here](#insights).
     - Over-Sampling ([Random Oversampling](#https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.RandomOverSampler.html#imblearn.over_sampling.RandomOverSampler) & [SMOTENC](#https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTENC.html))
     - Hybrid-Sampling
 
-### :white_check_mark: Model Development 🔩 <a class="anchor" id="develop"></a>
+### ✅ Model Development 🔩 <a class="anchor" id="develop"></a>
 - Model Tested:
-    - :white_check_mark: Logistic Regression **(Baseline Model)**
-    - :white_check_mark: Decision Tree
-    - :white_check_mark: Adative Boosting
-    - :white_check_mark: XGBoost
-    - :white_check_mark: Random Forest
-    - :white_check_mark: Naïve Bayes
-    - :white_check_mark: Neural Networks
+    - ✅ Logistic Regression **(Baseline Model)**
+    - ✅ Decision Tree
+    - ✅ Adative Boosting
+    - ✅ XGBoost
+    - ✅ Random Forest
+    - ✅ Naïve Bayes
+    - ✅ Neural Networks
 
 - Model Evaluation
     - Metric: [`Weighted F1 Score`](#https://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html)
@@ -220,7 +221,7 @@ For more EDA Finding, please refer to [here](#insights).
 
 🏆 Best Model: `Random Forest`
 
-### :white_check_mark: Model Interpretation (`Random Forest`) 🔢 <a class="anchor" id="interpret"></a>
+### ✅ Model Interpretation (`Random Forest`) 🔢 <a class="anchor" id="interpret"></a>
 
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/rf-interpret.png" alt="feature-importance" width="500" /></center>
 
@@ -231,14 +232,14 @@ The **top 5 most important features** for used car price listing are:
 4. `trim`: The version of car model
 5. `engine_size` The size of the car engine
 
-### :white_check_mark: Feature Selection 📤 <a class="anchor" id="select"></a>
+### ✅ Feature Selection 📤 <a class="anchor" id="select"></a>
 - Prinicipal Component Analysis
     - We tested PCA with 90% and 95% variance explained. But PCA is not useful to improve model performance in our dataset.
     - The possible reasons are:
         1. We removed features with less predictive power during feature engineering phase. 
         2. We have only around 20 columns, which may not require any dimension reduction.
 
-### :white_check_mark: Model Deployment 🚛 <a class="anchor" id="deploy"></a>
+### ✅ Model Deployment 🚛 <a class="anchor" id="deploy"></a>
 
 #### Instruction to run the Web Interface locally
 1. Open your terminal Clone this project
@@ -273,10 +274,10 @@ streamlit run 👀_Project_Overview.py
 
 7. Make prediction in the `🎲 Make Prediction` tab
 
-### :white_check_mark: User Interface Development 🖥️<a class="anchor" id="ui"></a>
+### ✅ User Interface Development 🖥️ <a class="anchor" id="ui"></a>
 - We developed our simple web UI with streamlit Python API.
 - You may input the data and make prediction with our best model.
-<left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/ui-demo.png" alt="Web UI Demo" width="600" /></left>
+<left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/ui-demo.png" alt="Web UI Demo" width="700" /></left>
 - You may now switch to different models for prediction.
 
 |Date Added|Model| % of Train Data Used|Remarks|
@@ -291,7 +292,7 @@ streamlit run 👀_Project_Overview.py
 ---
 
 ## 💡 Conclusion 💡 <a class="anchor" id="conclusion"></a>
-### 🧠 Insights & Findings 🧠<a class="anchor" id="insights"></a>
+### 🧠 Insights & Findings 🧠 <a class="anchor" id="insights"></a>
 
 
 - Throughout this project, our exploration and analysis have yielded invaluable insights and notable achievements. 
@@ -299,14 +300,14 @@ streamlit run 👀_Project_Overview.py
 
     - Finding - 1
         - `miles` follow log-normal distribution. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-miles-transform/miles-transform?:language=en-GB&:display_count=n&:origin=viz_share_link)
-        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log-miles.png" alt="log-miles" width="500" /></left>
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log-miles.png" alt="log-miles" width="700" /></left>
         
     - Finding - 2
         - Relationship between `log_miles` and `price range`. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-miles/Sheet7?:language=en-GB&:display_count=n&:origin=viz_share_link)
-        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/miles-pr.png" alt="log-miles-vs-price-range" width="500" /></left>
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/miles-pr.png" alt="log-miles-vs-price-range" width="700" /></left>
     - Finding - 3
         - Relationship between `engine_size` and `price range`. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-enginesize/Sheet72?:language=en-GB&:display_count=n&:origin=viz_share_link)
-        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/engine-pr.png" alt="engine-size-vs-price-range" width="500" /></left>
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/engine-pr.png" alt="engine-size-vs-price-range" width="700" /></left>
 
 
 ### 🎁 Key Takeaways 🎁 <a class="anchor" id="takeaways"></a>

@@ -1,12 +1,12 @@
   
-# :sparkles: Used Car Listing Price Range Prediction :sparkles:
+# ✨ Used Car Listing Price Range Prediction ✨
 ---
 
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/car-banner.png" alt="memes" width="600" /></center>
 
 ---
 
-## :memo: Table of Contents :memo: <a class="anchor" id="toc"></a>
+## 📝 Table of Contents 📝 <a class="anchor" id="toc"></a>
 - [Project Overview](#overview)
     - [Introduction](#intro)
     - [Story Behind](#story)
@@ -36,7 +36,7 @@
 
 ---
 
-## :eyes: Project Overview :eyes: <a class="anchor" id="overview"></a>
+## 👀 Project Overview 👀 <a class="anchor" id="overview"></a>
 
 ### Introduction :clipboard: <a class="anchor" id="intro"></a>
 The North American used car market is a boundless and dynamic landscape, characterized by a huge industry of vehicle makes, models, and relentnessly evolving market dynamics. In 2022, the used car market recorded **38.6 millions** sales volume in United States [[Source: statista]](https://www.statista.com/statistics/183713/value-of-us-passenger-cas-sales-and-leases-since-1990/).  
@@ -80,7 +80,7 @@ Assume being part of the data team in an online car listing platform, the price 
 [Back to top](#toc)
 
 ---
-## :capital_abcd: Dataset :1234: <a class="anchor" id="dataset"></a>
+## 🔠 Dataset 🔢 <a class="anchor" id="dataset"></a>
 
 ### Dataset Description :abc: <a class="anchor" id="desc"></a>
 - There are two separate datasets for Canada data (CA) and United States data (US). However, some data are wrongly located. For example, there are records with `city` of `Burnaby` and `state` of `BC` in the US dataset.
@@ -139,7 +139,7 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 
 ---
 
-## :runner: Project Roadmap / Framework :runner: <a class="anchor" id="roadmap"></a>
+## 🏃 Project Roadmap / Framework 🏃 <a class="anchor" id="roadmap"></a>
 ### :white_check_mark: Data Cleaning / Preprocessing :bathtub: <a class="anchor" id="cleaning"></a>  
 - Remove records without target variable data
 - Target variable labelling
@@ -262,7 +262,7 @@ streamlit run 👀_Project_Overview.py
 
 ---
 
-## :bulb: Conclusion :bulb: <a class="anchor" id="conclusion"></a>
+## 💡 Conclusion 💡 <a class="anchor" id="conclusion"></a>
 ### :bulb: Insights & Findings 🧠<a class="anchor" id="insights"></a>
 
 

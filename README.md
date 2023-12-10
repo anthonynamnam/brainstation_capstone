@@ -263,7 +263,7 @@ streamlit run 👀_Project_Overview.py
 ---
 
 ## 💡 Conclusion 💡 <a class="anchor" id="conclusion"></a>
-### :bulb: Insights & Findings 🧠<a class="anchor" id="insights"></a>
+### 🧠 Insights & Findings 🧠<a class="anchor" id="insights"></a>
 
 
 - Throughout this project, our exploration and analysis have yielded invaluable insights and notable achievements. 
@@ -280,7 +280,7 @@ streamlit run 👀_Project_Overview.py
         <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/engine_pr.png" alt="engine-size-vs-price-range" width="500" /></left>
 
 
-### :bulb: Key Takeaways 🎁 <a class="anchor" id="takeaways"></a>
+### 🎁 Key Takeaways 🎁 <a class="anchor" id="takeaways"></a>
 
 - `Data Imputation:`
     - Different types of imputation methods (e.g. `Forward/Baclward Fill` & `Regression Imputation`).
@@ -310,7 +310,7 @@ streamlit run 👀_Project_Overview.py
 - `Develop User Interface with Streamlit:`
     - Using streamlit Python API to build a simple Web User Interface for making prediction.
 
-### :bulb: Future Directions 🧭 <a class="anchor" id="nextsteps"></a>
+### 🧭 Future Directions 🧭 <a class="anchor" id="nextsteps"></a>
 Although this project is not a perfect solution, there are a large room for improvement. These are the possible next steps of this project:
 
 - Extend our models to regression task (i.e. `predicting exact listing price`)
@@ -319,7 +319,7 @@ Although this project is not a perfect solution, there are a large room for impr
 - Design new model structure to beat our best model (`Random Forest`)
 - Further enhance our Web UI
 
-### :bulb: Final Thoughts 💬 <a class="anchor" id="thoughts"></a>
+### 💬 Final Thoughts 💬 <a class="anchor" id="thoughts"></a>
 Although this project is not a perfect solution, there are a large room for improvement. To conclude, this project has been showcasing the power of data-driven methodologies in solving real-life problems in used car market. Our journey of data exploration, feature engineering, and model development has brought us closer to addressing the challenge of **_Price Uncertainty in Used Car Market_**. As we step forward, we embrace the continual development of leveraging data to drive meaningful impacts and innovative solution.
 
 [Back to top](#toc)

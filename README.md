@@ -142,9 +142,16 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 ## 🏃 Project Roadmap / Framework 🏃 <a class="anchor" id="roadmap"></a>
 ### :white_check_mark: Data Cleaning / Preprocessing :bathtub: <a class="anchor" id="cleaning"></a>  
 - Remove records without target variable data
-- Target variable labelling
+- Target Variable Labelling (`Label Encoding`)
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/label-encoding.png" alt="Label-Encoding" width="500" /></center>
+
 - Handling Missing Value
+    - Handling missing `Trim` value based on complete records
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/custom-handle-missing-data.png" alt="Custom-Handling-Strategy" width="500" /></center>
+
 - Features Flattening
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/data-flattening.png" alt="Data-Flattening" width="500" /></center>
+
 
 ### :white_check_mark: Exploratory Data Analysis :mag: <a class="anchor" id="eda"></a>
 - Univariate Analysis
@@ -152,12 +159,25 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 - Statistical Analysis
 - Correlation Analysis
 
-For EDA Finding, please refer to [here](#insights).
+Major Findings:
+- Model Make [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-vehicle-make/make?:language=en-GB&:display_count=n&:origin=viz_share_link)
+    - Top 3 Brands: `Ford --> Chevrolet --> Toyota`
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/brand-count.png" alt="Model-Makee" width="400" /></center>
+
+- Model Body Type [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-miles/body_type?:apiInternalVersion=1.105.0&:disableUrlActionsPopups=n&navSrc=Opt&:embed=y&navType=0&:suppressDefaultEditBehavior=n&mobile=n&:toolbar=n&:hideEditButton=n&:hideEditInDesktopButton=n&:jsdebug=n&:apiExternalVersion=3.2.0&:display_count=n&:origin=viz_share_link&:device=desktop)
+    - Top 3 Vehicle Body Type: `SUV --> Sedan --> Pickup`
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/body-type-count.png" alt="Body-Type" width="400" /></center>
+    
+- Transmission [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-vehicle-transmission/transmission?:language=en-GB&:display_count=n&:origin=viz_share_link)
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/transmission-count.png" alt="Transmission" width="400" /></center>
+
+For more EDA Finding, please refer to [here](#insights).
 
 ### :white_check_mark: Feature Engineering 🔧 <a class="anchor" id="engine"></a>
 - Feature Transformation 
     - Log Transformation
-    - Categorical Encoding
+    - Target Encoding
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/target-encoding.png" alt="Target-Encoding" width="400" /></center>
 - Multiple Listing Reduction
     - Exact same vehicle with multiple listing ranges in different dealers
 - Class Imbalance
@@ -202,9 +222,9 @@ For EDA Finding, please refer to [here](#insights).
 
 ### :white_check_mark: Model Interpretation (`Random Forest`) 🔢 <a class="anchor" id="interpret"></a>
 
-<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/rf_interpret.png" alt="feature-importance" width="500" /></center>
+<center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/rf-interpret.png" alt="feature-importance" width="500" /></center>
 
-The **top 5 most important features** for used car price listing are:
+The **top 5 most important features** for used car price listing are: 
 1. `model_year`: The launch year of the car model
 2. `log_miles`: The miles travelled by the car (Odometer value)
 3. `model`: The car model
@@ -256,7 +276,15 @@ streamlit run 👀_Project_Overview.py
 ### :white_check_mark: User Interface Development 🖥️<a class="anchor" id="ui"></a>
 - We developed our simple web UI with streamlit Python API.
 - You may input the data and make prediction with our best model.
-<left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/ui_demo.png" alt="Web UI Demo" width="500" /></left>
+<left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/ui-demo.png" alt="Web UI Demo" width="600" /></left>
+- You may now switch to different models for prediction.
+
+|Date Added|Model| % of Train Data Used|Remarks|
+|:---:|:---:|:---:|:---:|
+|30-11-2023| `Random Forest`| `100%`|(Best Model)|
+|04-12-2023| `Random Forest` | `10%`||
+|04-12-2023| `AdaBoost` | `100%`||
+|04-12-2023| `AdaBoost` | `10%`||
 
 [Back to top](#toc)
 
@@ -270,14 +298,15 @@ streamlit run 👀_Project_Overview.py
 - We've unearthed nuanced patterns, revealing hidden correlations and trends within the used car data. These discoveries not only enhance our understanding of the problem domain but also pave the way for informed decision-making. Here are some examples:
 
     - Finding - 1
-        - `miles` follow log-normal distribution.
-        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log_miles.png" alt="log-miles" width="500" /></left>
+        - `miles` follow log-normal distribution. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-miles-transform/miles-transform?:language=en-GB&:display_count=n&:origin=viz_share_link)
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log-miles.png" alt="log-miles" width="500" /></left>
+        
     - Finding - 2
-        - Relationship between `log_miles` and `price range`.
-        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/miles_pr.png" alt="log-miles-vs-price-range" width="500" /></left>
+        - Relationship between `log_miles` and `price range`. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-miles/Sheet7?:language=en-GB&:display_count=n&:origin=viz_share_link)
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/miles-pr.png" alt="log-miles-vs-price-range" width="500" /></left>
     - Finding - 3
-        - Relationship between `engine_size` and `price range`.
-        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/engine_pr.png" alt="engine-size-vs-price-range" width="500" /></left>
+        - Relationship between `engine_size` and `price range`. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-enginesize/Sheet72?:language=en-GB&:display_count=n&:origin=viz_share_link)
+        <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/engine-pr.png" alt="engine-size-vs-price-range" width="500" /></left>
 
 
 ### 🎁 Key Takeaways 🎁 <a class="anchor" id="takeaways"></a>
@@ -293,16 +322,16 @@ streamlit run 👀_Project_Overview.py
 - `Log-Normal Distribution:`
     - Understand the possible reason why `log-normal distribution` appears in data related to multiplicative processes.
     - How to and why it is better to handle `log-normal distribution`.
-    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log_normal.png" alt="log-normal" width="500" /></center>
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log-normal.png" alt="log-normal" width="500" /></center>
 - `Kruskal-Wallis Test:`
     - Alternative statistical test for ANOVA.
     - Applicable when equal variance assumption is violated in ANOVA.
     - Null Hypothesis: Median of all groups are the same.
-    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/kruskal_wallis.png" alt="kruskal-wallis" width="500" /></center>
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/kruskal-wallis.png" alt="kruskal-wallis" width="500" /></center>
 - `Class Imbalance:`
     - Understand the drawbacks of class imbalance.
     - Techniques to handle class imbalance (e.g. `Oversampling` & `UnderSampling` & `HybridSampling`).
-    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/class_bal.png" alt="classs-imbalance" width="400" /></center>
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/class-bal.png" alt="classs-imbalance" width="400" /></center>
 - `Model Development:`
     - How to write re-usable code for different models.
 - `Prettify Jupyter Notebooks:`

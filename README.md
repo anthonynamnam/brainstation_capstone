@@ -160,16 +160,17 @@ Dataset can be found on Kaggle :arrow_right: [:door:Teleport:door:](https://www.
 - Statistical Analysis
 - Correlation Analysis
 
-Major Findings:
+#### 🔍 Major Findings 🔍
 - Model Make [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-vehicle-make/make?:language=en-GB&:display_count=n&:origin=viz_share_link)
-    - Top 3 Brands: `Ford --> Chevrolet --> Toyota`
+    - Top 3 Brands: `Ford --> Chevrolet --> Toyota`.
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/brand-count.png" alt="Model-Make" width="400" /></center>
 
 - Model Body Type [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-miles/body_type?:language=en-GB&:display_count=n&:origin=viz_share_link)
-    - Top 3 Vehicle Body Type: `SUV --> Sedan --> Pickup`
+    - Top 3 Vehicle Body Type: `SUV --> Sedan --> Pickup`.
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/body-type-count.png" alt="Body-Type" width="400" /></center>
     
 - Transmission [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-vehicle-transmission/transmission?:language=en-GB&:display_count=n&:origin=viz_share_link)
+    - Most of the vehicles are automatic transmission. 
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/transmission-count.png" alt="Transmission" width="400" /></center>
 
 For more EDA Finding, please refer to [here](#insights).
@@ -242,12 +243,12 @@ The **top 5 most important features** for used car price listing are:
 ### ✅ Model Deployment 🚛 <a class="anchor" id="deploy"></a>
 
 #### Instruction to run the Web Interface locally
-1. Open your terminal Clone this project
+1. Open your terminal and clone this project
 ```
 git clone https://github.com/anthonynamnam/brainstation_capstone.git
 ```
 
-2. Go to `brainstation_capstotne/Streamlit` folder
+2. Go to `brainstation_capstone/Streamlit` folder
 ```
 cd brainstation_capstone/Streamlit
 ```
@@ -257,12 +258,12 @@ cd brainstation_capstone/Streamlit
 python3 -m venv .venv
 ```
 
-4. Install dependency
+4. Install dependencies
 ```
 pip install -r requirements.txt
 ```
 
-5. Download the models from my Google drive
+5. Download the models from my Google Drive
 ```
 gdown --folder https://drive.google.com/drive/folders/1JMNtB5mY73ZW1feWbPqOMZcIRrWKlldA -O ./models  
 ```
@@ -277,15 +278,16 @@ streamlit run 👀_Project_Overview.py
 ### ✅ User Interface Development 🖥️ <a class="anchor" id="ui"></a>
 - We developed our simple web UI with streamlit Python API.
 - You may input the data and make prediction with our best model.
+
 <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/ui-demo.png" alt="Web UI Demo" width="700" /></left>
 - You may now switch to different models for prediction.
 
 |Date Added|Model| % of Train Data Used|Remarks|
 |:---:|:---:|:---:|:---:|
-|30-11-2023| `Random Forest`| `100%`|(Best Model)|
-|04-12-2023| `Random Forest` | `10%`||
-|04-12-2023| `AdaBoost` | `100%`||
-|04-12-2023| `AdaBoost` | `10%`||
+|`30-11-2023`| `Random Forest`| `100%`| The Best Model|
+|`04-12-2023`| `Random Forest` | `10%`||
+|`04-12-2023`| `AdaBoost` | `100%`||
+|`04-12-2023`| `AdaBoost` | `10%`||
 
 [Back to top](#toc)
 
@@ -299,14 +301,17 @@ streamlit run 👀_Project_Overview.py
 - We've unearthed nuanced patterns, revealing hidden correlations and trends within the used car data. These discoveries not only enhance our understanding of the problem domain but also pave the way for informed decision-making. Here are some examples:
 
     - Finding - 1
-        - `miles` follow log-normal distribution. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-miles-transform/miles-transform?:language=en-GB&:display_count=n&:origin=viz_share_link)
+        - `miles` follow log-normal distribution. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-miles-transform/miles-transform?:language=en-GB&:display_count=n&:origin=viz_share_link) 
+
         <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log-miles.png" alt="log-miles" width="700" /></left>
         
     - Finding - 2
         - Relationship between `log_miles` and `price range`. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-miles/Sheet7?:language=en-GB&:display_count=n&:origin=viz_share_link)
+
         <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/miles-pr.png" alt="log-miles-vs-price-range" width="700" /></left>
     - Finding - 3
         - Relationship between `engine_size` and `price range`. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-price-to-enginesize/Sheet72?:language=en-GB&:display_count=n&:origin=viz_share_link)
+
         <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/engine-pr.png" alt="engine-size-vs-price-range" width="700" /></left>
 
 

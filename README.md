@@ -26,8 +26,8 @@
     - [Feature Selection](#select)
     - [Model Development](#develop)
     - [Model Interpretation](#interpret)
-    - [Model Deployment](#deploy)
-    - [User Interfave Development](#ui)
+    - [Model Deployment](#deploy) <-- Try it in your computer now!!!
+    - [User Interface Development](#ui)
 - [Conclusion](#conclusion)
     - [Insights & Findings](#insights)
     - [Key Takeaways](#takeaways)
@@ -39,43 +39,43 @@
 ## 👀 Project Overview 👀 <a class="anchor" id="overview"></a>
 
 ### Introduction 📋 <a class="anchor" id="intro"></a>
-The North American used car market is a boundless and dynamic landscape, characterized by a huge industry of vehicle makes, models, and relentnessly evolving market dynamics. In 2022, the used car market recorded **38.6 millions** sales volume in United States [[Source: statista]](https://www.statista.com/statistics/183713/value-of-us-passenger-cas-sales-and-leases-since-1990/).  
+The North American used car market is a boundless and dynamic landscape, characterized by a huge industry of vehicle makes, models, and relentlessly evolving market dynamics. In 2022, the used car market recorded **38.6 million** sales volume in the United States [[Source: statista]](https://www.statista.com/statistics/183713/value-of-us-passenger-cas-sales-and-leases-since-1990/).  
 
-Buyers and sellers often grapple with the challenge of accurately determining the fair market value of a used car, leading to potential disparities in pricing, suboptimal transactions, and general market inefficiencies. The dilemma of accurately pricing a used vehicles remains a persistent enigma for years. According to [canadadrives](https://www.canadadrives.ca/blog/car-guide/selling-a-used-car-privately), it takes up to 4 weeks to sell a used car. For both sellers and buyers, this dilemma often transforms into uncertainty, frustration, and even missed opportunities. 
+Buyers and sellers often grapple with the challenge of accurately determining the fair market value of a used car, leading to potential disparities in pricing, suboptimal transactions, and general market inefficiencies. The dilemma of accurately pricing used vehicles remains a persistent enigma for years. According to [canadadrives](https://www.canadadrives.ca/blog/car-guide/selling-a-used-car-privately), it takes up to 4 weeks to sell a used car. For both sellers and buyers, this dilemma often transforms into uncertainty, frustration, and even missed opportunities. 
 
 ### Story Behind 📔 <a class="anchor" id="story"></a>
-My friend, Jason, who lived in Vancouver for 2 years, wanted to get a car recently. He did not have enough budget to get a new car. Therefore, he decided to buy a second-hand vehicle. He went to several dealers for inquiries. However, all dealer agents tried to persuade him to pay at a higher price to get a better car. At last, he got his car from craigslist directly from the previous owner within his budget and his requirement.
+My friend, Jason, who lived in Vancouver for 2 years, wanted to get a car recently. He did not have enough budget to get a new car. Therefore, he decided to buy a second-hand vehicle. He went to several dealers for inquiries. However, all the dealer agents tried to persuade him to pay at a higher price to get a better car. At last, he got his car from Craigslist directly from the previous owner within his budget and his requirements.
 
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/meme-1.png" alt="memes" width="200"/></center>
 
 ### Problem Statement 😩 <a class="anchor" id="problem"></a>
-The problem we try to address in this project remains focus on **the need for accurate and transparent pricing** in the North American used car market. The wide variety of vehicles, including numerous makes, models, years, mileage, drivetrains, transmission and geographic locations, contributes to the complexity of this problem. 
+The problem we try to address in this project remains focused on **the need for accurate and transparent pricing** in the North American used car market. The wide variety of vehicles, including numerous makes, models, years, mileage, drivetrains, transmission and geographic locations, contributes to the complexity of this problem. 
 
 - **Buyers** often find it difficult to assess whether a listed car's price is reasonable, leading to price uncertainty and the potential for overpayment.  
-- **Sellers** may often struggle to set competitive (higher) and attractive (lower) listing prices, potentially resulting in unsuccessful sales or missed opportunity. 
+- **Sellers** may often struggle to set competitive (higher) and attractive (lower) listing prices, potentially resulting in unsuccessful sales or missed opportunities. 
 
 ### Our Solution 💡 <a class="anchor" id="solution"></a>
 <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/meme-2.webp" alt="Project Banner" width="220"/></center>
 
-**To address these issues**, our purposed solution is to develop advanced machine learning and deep learning models that can accurately predict the price range of used cars in North America, considering multiple factors such as make, model, year, mileage, engine condition, location, and other optional features.
+**To address these issues**, our proposed solution is to develop advanced machine learning and deep learning models that can accurately predict the price range of used cars in North America, considering multiple factors such as make, model, year, mileage, engine condition, location, and other optional features.
 
 ### Objectives 🎯 <a class="anchor" id="objective"></a>
-#### 1️⃣ Develop advanced predictive models that estimates the price range for used cars. 
-The primary objective is the development of machine learning / deep learning models capable of accurately predicting price ranges for a used car, which will assist both sellers and buyers make informed pricing decisions.
+#### 1️⃣ Develop advanced predictive models that estimate the price range for used cars. 
+The primary objective is the development of machine learning / deep learning models capable of accurately predicting price ranges for a used car, which will assist both sellers and buyers in making informed pricing decisions.
 
-#### 2️⃣ Improve market efficiency by enhancing the transparency and fairness in the used car market. 
-One of the objectives is to the improve the market efficiency. By providing AI price range predictions, it reduces **information asymmetry** between buyers and sellers, which also helps users **understand the fair market value** of the used vehicle.
+#### 2️⃣ Improve market efficiency by enhancing transparency and fairness in the used car market. 
+One of the objectives is to improve the market efficiency. By providing AI price range predictions, it reduces **information asymmetry** between buyers and sellers, which also helps users **understand the fair market value** of the used vehicle.
 
-#### 3️⃣ Faciliate decision-making process for both sellers and buyers with informed pricing prediction. 
+#### 3️⃣ Facilitate the decision-making process for both sellers and buyers with informed pricing prediction. 
 Sellers can benefit by setting **competitive and fair** prices, which can lead to **faster** sales. Buyers can make more informed and data-driven decisions to ensure they are **not overpaying** for a used vehicle.
 
 #### 4️⃣ Provide a user-friendly interface (simple website) for easy access to price range predictions.
 The project includes the development of a simple and interactive user interface, making it accessible to a wide range of users. This interface allows sellers and buyers to input their vehicle details easily and obtain price range predictions quickly and conveniently.
 
 ### Potential Impact 💥 <a class="anchor" id="impact"></a>
-According to the research by [Straits Research](https://www.globenewswire.com/en/news-release/2023/03/14/2626611/0/en/Online-Car-Buying-Market-Size-is-projected-to-reach-USD-722-billion-by-2030-growing-at-a-CAGR-of-12-21-Straits-Research.html), ***"Online Car Buying Market Size is projected to reach USD 722 billion by 2030, growing at a CAGR of 12.21%"***. Online used car listing platform empowered by AI would facilitate the makret efficiency, which generate more profit and reduce costs. The time cost and manpower saved for negoiation between parties would save up to 10% of the operation cost.
+According to the research by [Straits Research](https://www.globenewswire.com/en/news-release/2023/03/14/2626611/0/en/Online-Car-Buying-Market-Size-is-projected-to-reach-USD-722-billion-by-2030-growing-at-a-CAGR-of-12-21-Straits-Research.html), ***"Online Car Buying Market Size is projected to reach USD 722 billion by 2030, growing at a CAGR of 12.21%"***. Online used car listing platforms empowered by AI would facilitate market efficiency, which generates more profit and reduce costs. The time cost and manpower saved for negotiations between parties would save up to 10% of the operation cost.
 
-Assume being part of the data team in an online car listing platform, the price range prediction service could be a premium feature that requires extra transaction percentage or, along with some free services, which is known as **Freemium Model**. The estimated growth of gross profit would be 20%.
+Assume being part of the data team in an online car listing platform, the price range prediction service could be a premium feature that requires extra transaction percentage or, along with some free services, which is known as the **Freemium Model**. The estimated growth of gross profit would be 20%.
 
 [Back to top](#toc)
 
@@ -133,7 +133,7 @@ Dataset can be found on Kaggle ➡️ 🚪[Teleport](https://www.kaggle.com/data
     - Ending Date: 05 Jun 2021
     
 - Geospatial Coverage 🌎
-    - North America (Canada and United States)
+    - North America (Canada and the United States)
 
 [Back to top](#toc)
 
@@ -190,7 +190,7 @@ For more EDA Finding, please refer to [here](#insights).
 - Model Tested:
     - ✅ Logistic Regression **(Baseline Model)**
     - ✅ Decision Tree
-    - ✅ Adative Boosting
+    - ✅ Adaptive Boosting
     - ✅ XGBoost
     - ✅ Random Forest
     - ✅ Naïve Bayes
@@ -212,7 +212,7 @@ For more EDA Finding, please refer to [here](#insights).
 |`Gaussian Naïve Bayes`|`45.75%`|`43.18%`|
 |`Neural Network`|`32.06%`|`32.38%`|
 
-- Model Performance trained with full set of data
+- Model Performance trained with the full set of data
 
 |`Models`|`Training Time`|`Training F1`|`Testing F1`|
 |---|:---:|:---:|:---:|
@@ -234,10 +234,10 @@ The **top 5 most important features** for used car price listing are:
 5. `engine_size` The size of the car engine
 
 ### ✅ Feature Selection 📤 <a class="anchor" id="select"></a>
-- Prinicipal Component Analysis
-    - We tested PCA with 90% and 95% variance explained. But PCA is not useful to improve model performance in our dataset.
+- Principal Component Analysis
+    - We tested PCA with 90% and 95% variance explained. However, PCA is not useful to improve model performance in our dataset.
     - The possible reasons are:
-        1. We removed features with less predictive power during feature engineering phase. 
+        1. We removed features with less predictive power during the feature engineering phase. 
         2. We have only around 20 columns, which may not require any dimension reduction.
 
 ### ✅ Model Deployment 🚛 <a class="anchor" id="deploy"></a>
@@ -301,7 +301,7 @@ streamlit run 👀_Project_Overview.py
 - We've unearthed nuanced patterns, revealing hidden correlations and trends within the used car data. These discoveries not only enhance our understanding of the problem domain but also pave the way for informed decision-making. Here are some examples:
 
     - Finding - 1
-        - `miles` follow log-normal distribution. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-miles-transform/miles-transform?:language=en-GB&:display_count=n&:origin=viz_share_link) 
+        - `miles` follow a log-normal distribution. [Link](https://public.tableau.com/views/used-vehicle-price-range-prediction-miles-transform/miles-transform?:language=en-GB&:display_count=n&:origin=viz_share_link) 
 
         <left><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/log-miles.png" alt="log-miles" width="700" /></left>
         
@@ -318,7 +318,7 @@ streamlit run 👀_Project_Overview.py
 ### 🎁 Key Takeaways 🎁 <a class="anchor" id="takeaways"></a>
 
 - `Data Imputation`
-    - Different types of imputation methods (e.g. `Forward/Baclward Fill` & `Regression Imputation`).
+    - Different types of imputation methods (e.g. `Forward/Backward Fill` & `Regression Imputation`).
     - Their characteristics, advantages and disadvantages.
     - Their possible use cases.
 - `Feature Encoding`
@@ -332,30 +332,30 @@ streamlit run 👀_Project_Overview.py
 - `Kruskal-Wallis Test`
     - Alternative statistical test for ANOVA.
     - Applicable when equal variance assumption is violated in ANOVA.
-    - Null Hypothesis: Median of all groups are the same.
+    - Null Hypothesis: The median of all groups is the same.
     <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/kruskal-wallis.png" alt="kruskal-wallis" width="500" /></center>
 - `Class Imbalance`
     - Understand the drawbacks of class imbalance.
     - Techniques to handle class imbalance (e.g. `Oversampling` & `UnderSampling` & `HybridSampling`).
-    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/class-bal.png" alt="classs-imbalance" width="400" /></center>
+    <center><img src="https://raw.githubusercontent.com/anthonynamnam/anthonynamnam/main/icons/bs-capstone/class-bal.png" alt="class-imbalance" width="400" /></center>
 - `Model Development`
-    - How to write re-usable code for different models.
+    - How to write reusable code for different models.
 - `Prettify Jupyter Notebooks`
-    - Apply `html` component to add style in `markdown`.
+    - Apply `HTML` component to add style in `markdown`.
 - `Develop User Interface with Streamlit`
-    - Using streamlit Python API to build a simple Web User Interface for making prediction.
+    - Using streamlit Python API to build a simple Web User Interface for making predictions.
 
 ### 🧭 Future Directions 🧭 <a class="anchor" id="nextsteps"></a>
-Although this project is not a perfect solution, there are a large room for improvement. These are the possible next steps of this project:
+Although this project is not a perfect solution, there is a large room for improvement. These are the possible next steps of this project:
 
 - Extend our models to regression task (i.e. `predicting exact listing price`)
 - Fine-tune (Re-train) our models with new data 
 - Incorporate with additional features
-- Design new model structure to beat our best model (`Random Forest`)
-- Further enhance our Web UI
+- Design a new model structure to beat our best model (`Random Forest`)
+- Further enhancement of our Web UI
 
 ### 💬 Final Thoughts 💬 <a class="anchor" id="thoughts"></a>
-Although this project is not a perfect solution, there are a large room for improvement. To conclude, this project has been showcasing the power of data-driven methodologies in solving real-life problems in used car market. Our journey of data exploration, feature engineering, and model development has brought us closer to addressing the challenge of **_Price Uncertainty in Used Car Market_**. As we step forward, we embrace the continual development of leveraging data to drive meaningful impacts and innovative solution.
+Although this project is not a perfect solution, there is a large room for improvement. To conclude, this project has been showcasing the power of data-driven methodologies in solving real-life problems in the used car market. Our journey of data exploration, feature engineering, and model development has brought us closer to addressing the challenge of **_Price Uncertainty in Used Car Market_**. As we step forward, we embrace the continual development of leveraging data to drive meaningful impacts and innovative solutions.
 
 [Back to top](#toc)
 
